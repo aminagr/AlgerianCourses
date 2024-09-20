@@ -31,7 +31,7 @@ const App = () => {
   const handleClose = () => {
     setSelectedCourse(null);
     setCurrentLessonIndex(0);
-    setCurrentPage('home');
+    setCurrentPage('courses');
   };
 
   const renderCourseCards = () => {
