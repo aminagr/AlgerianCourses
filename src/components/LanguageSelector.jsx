@@ -1,6 +1,9 @@
 import React from 'react';
+import { useAppContext } from '../context/AppContext';
 
-const LanguageSelector = ({ language, setLanguage }) => {
+const LanguageSelector = () => {
+  const { language, setLanguage } = useAppContext();
+
   return (
     <select className="language-selector" value={language} onChange={(e) => setLanguage(e.target.value)}>
       <option value="en">🇬🇧 English</option>

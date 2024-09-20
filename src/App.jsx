@@ -1,18 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { AppProvider, useAppContext } from './context/AppContext.jsx';
+
+
 import Navbar from './components/Navbar';
 import CourseCard from './components/CourseCard';
 import LessonCard from './components/LessonCard';
 import Home from './components/Home';
 import Footer from './components/Footer';
-import lessonsData from './data/lessons.json';
-import translations from './data/translations';
+import lessonsData from './data/lessons.json'; // Your lessons data
+import translations from './data/translations'; // Your translations data
 import './styles.css';
 
-const App = () => {
-  const [language, setLanguage] = useState('en');
-  const [selectedCourse, setSelectedCourse] = useState(null);
-  const [currentLessonIndex, setCurrentLessonIndex] = useState(0);
-  const [currentPage, setCurrentPage] = useState('home');
+const AppContent = () => {
+  const {
+    language,
+    setLanguage,
+    selectedCourse,
+    setSelectedCourse,
+    currentLessonIndex,
+    setCurrentLessonIndex,
+    currentPage,
+    setCurrentPage,
+  } = useAppContext();
 
   const handleCourseClick = (course) => {
     setSelectedCourse(course);
@@ -21,7 +30,9 @@ const App = () => {
   };
 
   const handleNext = () => {
-    setCurrentLessonIndex((prevIndex) => Math.min(prevIndex + 1, lessonsData.courses[selectedCourse].lessons.length - 1));
+    setCurrentLessonIndex((prevIndex) => 
+      Math.min(prevIndex + 1, lessonsData.courses[selectedCourse].lessons.length - 1)
+    );
   };
 
   const handlePrev = () => {
@@ -43,20 +54,20 @@ const App = () => {
       />
     ));
   };
-  
+
   const renderContent = () => {
     if (currentPage === 'home') {
-      return <Home message={translations[language].welcome} />;
+      return <Home message={translations[language].accueil} />;
     } else if (currentPage === 'course') {
       if (!selectedCourse) return null;
-      
+
       const lesson = lessonsData.courses[selectedCourse].lessons[currentLessonIndex];
       const totalLessons = lessonsData.courses[selectedCourse].lessons.length;
 
       return (
         <LessonCard
           lesson={lesson}
-          courseTitle={lessonsData.courses[selectedCourse].title[language]} // Pass course title here
+          courseTitle={lessonsData.courses[selectedCourse].title[language]}
           language={language}
           onNext={handleNext}
           onPrev={handlePrev}
@@ -67,23 +78,23 @@ const App = () => {
         />
       );
     } else if (currentPage === 'courses') {
-      return (
-        <div className="courses">
-          {renderCourseCards()}
-        </div>
-      );
+      return <div className="courses">{renderCourseCards()}</div>;
     }
   };
-  
+
   return (
     <div className="app">
-      <Navbar language={language} setLanguage={setLanguage} setCurrentPage={setCurrentPage} translations={translations} />
-      <div className="content">
-        {renderContent()}
-      </div>
+      <Navbar />
+      <div className="content">{renderContent()}</div>
       <Footer footerText={translations[language].footer} />
     </div>
   );
 };
+
+const App = () => (
+  <AppProvider>
+    <AppContent />
+  </AppProvider>
+);
 
 export default App;
