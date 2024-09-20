@@ -1,67 +1,90 @@
 {
-    "lessons": {
-      "pronouns": [
-        {
-          "id": 1,
-          "word": {
-            "algerian": "Ana",
-            "french": "Moi",
-            "english": "Me"
-          },
-          "note": ""
+  "lessons": {
+    "pronouns": [
+      {
+        "id": 1,
+        "word": {
+          "dz": "Ana",
+          "fr": "Moi",
+          "en": "Me",
+          "es": "Yo",
+          "it": "Io",
+          "ru": "Я",
+          "ar": "أنا "
         },
-        {
-          "id": 2,
-          "word": {
-            "algerian": "Nta",
-            "french": "Toi (masculin)",
-            "english": "You (masculine)"
-          },
-          "note": ""
+        "note": ""
+      },
+      {
+        "id": 2,
+        "word": {
+          "dz": "Nta",
+          "fr": "Toi (masculin)",
+          "en": "You (masculine)",
+          "es": "Tú (masculino)",
+          "it": "Tu (maschile)",
+          "ru": "Ты ",
+          "ar": "أنتَ"
         },
-        {
-          "id": 3,
-          "word": {
-            "algerian": "Nti",
-            "french": "Toi (féminin)",
-            "english": "You (feminine)"
-          },
-          "note": ""
-        }
-      ],
-      "greetings": [
-        {
-          "id": 1,
-          "word": {
-            "algerian": "Salam",
-            "french": "Bonjour",
-            "english": "Hello"
-          },
-          "note": ""
-        }
-      ],
-      "family": [
-        {
-          "id": 1,
-          "word": {
-            "algerian": "Walid",
-            "french": "Père",
-            "english": "Father"
-          },
-          "note": ""
-        }
-      ],
-      "verbs": [
-        {
-          "id": 1,
-          "word": {
-            "algerian": "Nqoul",
-            "french": "Dire",
-            "english": "Say"
-          },
-          "note": ""
-        }
-      ]
-    }
+        "note": ""
+      },
+      {
+        "id": 3,
+        "word": {
+          "dz": "Nti",
+          "fr": "Toi (féminin)",
+          "en": "You (feminine)",
+          "es": "Tú (femenino)",
+          "it": "Tu (femminile)",
+          "ru": "Ты",
+          "ar": "أنتِ"
+        },
+        "note": ""
+      }
+    ],
+    "greetings": [
+      {
+        "id": 1,
+        "word": {
+          "dz": "Salam",
+          "fr": "Bonjour",
+          "en": "Hello",
+          "es": "Hola",
+          "it": "Ciao",
+          "ru": "Привет",
+          "ar": "سلام "
+        },
+        "note": ""
+      }
+    ],
+    "family": [
+      {
+        "id": 1,
+        "word": {
+          "dz": "Walid",
+          "fr": "Père",
+          "en": "Father",
+          "es": "Padre",
+          "it": "Padre",
+          "ru": "Отец",
+          "ar": "أب"
+        },
+        "note": ""
+      }
+    ],
+    "verbs": [
+      {
+        "id": 1,
+        "word": {
+          "dz": "Nqoul",
+          "fr": "Dire",
+          "en": "Say",
+          "es": "Decir",
+          "it": "Dire",
+          "ru": "Сказать",
+          "ar": "قول "
+        },
+        "note": ""
+      }
+    ]
   }
-  
+}

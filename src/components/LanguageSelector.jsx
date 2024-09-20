@@ -5,6 +5,10 @@ const LanguageSelector = ({ language, setLanguage }) => {
     <select className="language-selector" value={language} onChange={(e) => setLanguage(e.target.value)}>
       <option value="fr">Français</option>
       <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="it">Italiano</option>
+      <option value="ru">Русский</option>
+      <option value="ar">العربية</option>
     </select>
   );
 };

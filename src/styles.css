@@ -1,3 +1,20 @@
+:root {
+  --background-color: #f5f5f5;
+  --navbar-background: #2c3e50;
+  --navbar-background-hover: #34495e;
+  --navbar-text-color: white;
+  --menu-item-hover-color: #3498db;
+  --course-card-background: #fff;
+  --course-card-hover-scale: 1.05;
+  --lesson-card-background: #fff;
+  --button-background: #3498db;
+  --button-background-hover: #2980b9;
+  --button-disabled-background: #bdc3c7;
+  --footer-background: #2c3e50;
+  --close-button-background: rgb(238, 31, 31);
+  --close-button-background-hover: darkred;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -6,7 +23,7 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: var(--background-color);
   overflow: hidden; /* Prevent scrolling on body */
 }
 
@@ -21,15 +38,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2c3e50;
+  background-color: var(--navbar-background);
   padding: 10px 20px;
-  color: white;
+  color: var(--navbar-text-color);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   transition: background-color 0.3s;
 }
 
 .navbar:hover {
-  background-color: #34495e; /* Darker shade on hover */
+  background-color: var(--navbar-background-hover);
 }
 
 .navbar-title {
@@ -54,7 +71,7 @@ body {
 }
 
 .navbar-menu li:hover {
-  color: #3498db;
+  color: var(--menu-item-hover-color);
 }
 
 .language-selector {
@@ -83,7 +100,7 @@ body {
 }
 
 .course-card {
-  background: #fff;
+  background: var(--course-card-background);
   border-radius: 12px;
   padding: 20px;
   margin: 10px;
@@ -94,13 +111,13 @@ body {
 }
 
 .course-card:hover {
-  transform: scale(1.05);
+  transform: scale(var(--course-card-hover-scale));
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
 .lesson-card {
   position: relative; /* Ensure positioning is relative for absolute children */
-  background: #fff;
+  background: var(--lesson-card-background);
   border-radius: 12px;
   padding: 20px;
   margin: 10px;
@@ -109,7 +126,7 @@ body {
   max-width: 600px;
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
-  margin : 100px 0;
+  margin: 100px 0;
 }
 
 .lesson-card:hover {
@@ -127,7 +144,7 @@ button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #3498db;
+  background-color: var(--button-background);
   color: white;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
@@ -135,21 +152,21 @@ button {
 }
 
 button:hover {
-  background-color: #2980b9;
+  background-color: var(--button-background-hover);
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 button:disabled {
-  background-color: #bdc3c7;
+  background-color: var(--button-disabled-background);
   cursor: not-allowed;
 }
 
 .footer {
   text-align: center;
   padding: 10px;
-  background-color: #2c3e50;
-  color: white;
+  background-color: var(--footer-background);
+  color: var(--navbar-text-color);
   width: 100%;
   position: relative; /* Ensure proper positioning */
   bottom: 0;
@@ -159,7 +176,7 @@ button:disabled {
   position: absolute; /* Position it relative to the lesson card */
   top: 10px;
   right: 10px;
-  background-color: red;
+  background-color: var(--close-button-background);
   color: white;
   border: none;
   border-radius: 5px;
@@ -170,16 +187,11 @@ button:disabled {
 }
 
 .close-button:hover {
-  background-color: darkred;
-}
-.button-container {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
+  background-color: var(--close-button-background-hover);
 }
 
 @media (max-width: 600px) {
-
   .lesson-card {
-  margin : 70px 0;
-}}
+    margin: 70px 0;
+  }
+}
