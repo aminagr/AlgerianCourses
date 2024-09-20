@@ -12,7 +12,6 @@ import './styles.css';
 const AppContent = () => {
   const {
     language,
-    setLanguage,
     selectedCourse,
     setSelectedCourse,
     currentLessonIndex,
@@ -81,10 +80,10 @@ const AppContent = () => {
   };
 
   return (
-    <div className="app"> {/* Main app wrapper */}
+    <div className="app">
       <Navbar />
-      <div className="content"> {/* Content wrapper */}
-        {renderContent()} {/* Render the appropriate content */}
+      <div className="content">
+        {renderContent()}
       </div>
       <Footer footerText={translations[language].footer} />
     </div>

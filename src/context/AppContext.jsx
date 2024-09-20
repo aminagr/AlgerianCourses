@@ -1,12 +1,10 @@
 import React, { createContext, useContext, useState } from 'react';
-import translations from '../data/translations'; // Adjust the path to where your translations file is located
+import translations from '../data/translations';
+import lessonsData from '../data/lessons.json'; // Import your lessons data
 
-// Create the AppContext
 const AppContext = createContext();
 
-// Define the AppProvider component
 export const AppProvider = ({ children }) => {
-  // State variables
   const [language, setLanguage] = useState('en'); // Default language
   const [selectedCourse, setSelectedCourse] = useState(null);
   const [currentLessonIndex, setCurrentLessonIndex] = useState(0);
@@ -22,12 +20,12 @@ export const AppProvider = ({ children }) => {
       setCurrentLessonIndex,
       currentPage,
       setCurrentPage,
-      translations, // Include translations in context
+      translations,
+      courses: lessonsData.courses, // Provide courses here
     }}>
       {children}
     </AppContext.Provider>
   );
 };
 
-// Custom hook to use the AppContext
 export const useAppContext = () => useContext(AppContext);
