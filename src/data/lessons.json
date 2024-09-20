@@ -1,90 +1,130 @@
 {
-  "lessons": {
-    "pronouns": [
-      {
-        "id": 1,
-        "word": {
-          "dz": "Ana",
-          "fr": "Moi",
-          "en": "Me",
-          "es": "Yo",
-          "it": "Io",
-          "ru": "Я",
-          "ar": "أنا "
-        },
-        "note": ""
+  "courses": {
+    "pronouns": {
+      "title": {
+        "fr": "Pronoms",
+        "en": "Pronouns",
+        "es": "Pronombres",
+        "it": "Pronomi",
+        "ru": "Местоимения",
+        "ar": "الضمائر"
       },
-      {
-        "id": 2,
-        "word": {
-          "dz": "Nta",
-          "fr": "Toi (masculin)",
-          "en": "You (masculine)",
-          "es": "Tú (masculino)",
-          "it": "Tu (maschile)",
-          "ru": "Ты ",
-          "ar": "أنتَ"
+      "lessons": [
+        {
+          "id": 1,
+          "word": {
+            "dz": "Ana",
+            "fr": "Moi",
+            "en": "Me",
+            "es": "Yo",
+            "it": "Io",
+            "ru": "Я",
+            "ar": "أنا "
+          },
+          "note": ""
         },
-        "note": ""
+        {
+          "id": 2,
+          "word": {
+            "dz": "Nta",
+            "fr": "Toi (masculin)",
+            "en": "You (masculine)",
+            "es": "Tú (masculino)",
+            "it": "Tu (maschile)",
+            "ru": "Ты",
+            "ar": "أنتَ"
+          },
+          "note": ""
+        },
+        {
+          "id": 3,
+          "word": {
+            "dz": "Nti",
+            "fr": "Toi (féminin)",
+            "en": "You (feminine)",
+            "es": "Tú (femenino)",
+            "it": "Tu (femminile)",
+            "ru": "Ты",
+            "ar": "أنتِ"
+          },
+          "note": ""
+        }
+      ]
+    },
+    "greetings": {
+      "title": {
+        "fr": "Salutations",
+        "en": "Greetings",
+        "es": "Saludos",
+        "it": "Saluti",
+        "ru": "Приветствия",
+        "ar": "التحيات"
       },
-      {
-        "id": 3,
-        "word": {
-          "dz": "Nti",
-          "fr": "Toi (féminin)",
-          "en": "You (feminine)",
-          "es": "Tú (femenino)",
-          "it": "Tu (femminile)",
-          "ru": "Ты",
-          "ar": "أنتِ"
-        },
-        "note": ""
-      }
-    ],
-    "greetings": [
-      {
-        "id": 1,
-        "word": {
-          "dz": "Salam",
-          "fr": "Bonjour",
-          "en": "Hello",
-          "es": "Hola",
-          "it": "Ciao",
-          "ru": "Привет",
-          "ar": "سلام "
-        },
-        "note": ""
-      }
-    ],
-    "family": [
-      {
-        "id": 1,
-        "word": {
-          "dz": "Walid",
-          "fr": "Père",
-          "en": "Father",
-          "es": "Padre",
-          "it": "Padre",
-          "ru": "Отец",
-          "ar": "أب"
-        },
-        "note": ""
-      }
-    ],
-    "verbs": [
-      {
-        "id": 1,
-        "word": {
-          "dz": "Nqoul",
-          "fr": "Dire",
-          "en": "Say",
-          "es": "Decir",
-          "it": "Dire",
-          "ru": "Сказать",
-          "ar": "قول "
-        },
-        "note": ""
-      }
-    ]
+      "lessons": [
+        {
+          "id": 1,
+          "word": {
+            "dz": "Salam",
+            "fr": "Bonjour",
+            "en": "Hello",
+            "es": "Hola",
+            "it": "Ciao",
+            "ru": "Привет",
+            "ar": "سلام "
+          },
+          "note": ""
+        }
+      ]
+    },
+    "family": {
+      "title": {
+        "fr": "Famille",
+        "en": "Family",
+        "es": "Familia",
+        "it": "Famiglia",
+        "ru": "Семья",
+        "ar": "العائلة"
+      },
+      "lessons": [
+        {
+          "id": 1,
+          "word": {
+            "dz": "Walid",
+            "fr": "Père",
+            "en": "Father",
+            "es": "Padre",
+            "it": "Padre",
+            "ru": "Отец",
+            "ar": "أب"
+          },
+          "note": ""
+        }
+      ]
+    },
+    "verbs": {
+      "title": {
+        "fr": "Verbes",
+        "en": "Verbs",
+        "es": "Verbos",
+        "it": "Verbi",
+        "ru": "Глаголы",
+        "ar": "الأفعال"
+      },
+      "lessons": [
+        {
+          "id": 1,
+          "word": {
+            "dz": "Nqoul",
+            "fr": "Dire",
+            "en": "Say",
+            "es": "Decir",
+            "it": "Dire",
+            "ru": "Сказать",
+            "ar": "قول"
+          },
+          "note": ""
+        }
+      ]
+    }
   }
 }

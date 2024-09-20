@@ -9,7 +9,7 @@ import translations from './data/translations';
 import './styles.css';
 
 const App = () => {
-  const [language, setLanguage] = useState('fr');
+  const [language, setLanguage] = useState('en');
   const [selectedCourse, setSelectedCourse] = useState(null);
   const [currentLessonIndex, setCurrentLessonIndex] = useState(0);
   const [currentPage, setCurrentPage] = useState('home');
@@ -21,11 +21,11 @@ const App = () => {
   };
 
   const handleNext = () => {
-    setCurrentLessonIndex((prevIndex) => prevIndex + 1);
+    setCurrentLessonIndex((prevIndex) => Math.min(prevIndex + 1, lessonsData.courses[selectedCourse].lessons.length - 1));
   };
 
   const handlePrev = () => {
-    setCurrentLessonIndex((prevIndex) => prevIndex - 1);
+    setCurrentLessonIndex((prevIndex) => Math.max(prevIndex - 1, 0));
   };
 
   const handleClose = () => {
@@ -35,32 +35,35 @@ const App = () => {
   };
 
   const renderCourseCards = () => {
-    return Object.keys(lessonsData.lessons).map((course, index) => (
+    return Object.keys(lessonsData.courses).map((course, index) => (
       <CourseCard
         key={index}
-        title={translations[language][course]}
+        title={lessonsData.courses[course].title[language]}
         onClick={() => handleCourseClick(course)}
       />
     ));
   };
-
+  
   const renderContent = () => {
     if (currentPage === 'home') {
       return <Home message={translations[language].welcome} />;
     } else if (currentPage === 'course') {
-      const lesson = lessonsData.lessons[selectedCourse][currentLessonIndex];
-      const totalLessons = lessonsData.lessons[selectedCourse].length; // Get the total lessons
-  
+      if (!selectedCourse) return null;
+      
+      const lesson = lessonsData.courses[selectedCourse].lessons[currentLessonIndex];
+      const totalLessons = lessonsData.courses[selectedCourse].lessons.length;
+
       return (
         <LessonCard
           lesson={lesson}
+          courseTitle={lessonsData.courses[selectedCourse].title[language]} // Pass course title here
           language={language}
           onNext={handleNext}
           onPrev={handlePrev}
           onClose={handleClose}
           translations={translations[language].lesson}
-          currentLessonIndex={currentLessonIndex} // Pass current lesson index
-          totalLessons={totalLessons} // Pass total number of lessons
+          currentLessonIndex={currentLessonIndex}
+          totalLessons={totalLessons}
         />
       );
     } else if (currentPage === 'courses') {
@@ -71,6 +74,7 @@ const App = () => {
       );
     }
   };
+  
   return (
     <div className="app">
       <Navbar language={language} setLanguage={setLanguage} setCurrentPage={setCurrentPage} translations={translations} />
