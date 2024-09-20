@@ -1,11 +1,11 @@
 import React, { createContext, useContext, useState } from 'react';
 import translations from '../data/translations';
-import lessonsData from '../data/lessons.json'; // Import your lessons data
+import lessonsData from '../data/lessons.json'; 
 
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-  const [language, setLanguage] = useState('en'); // Default language
+  const [language, setLanguage] = useState('en'); 
   const [selectedCourse, setSelectedCourse] = useState(null);
   const [currentLessonIndex, setCurrentLessonIndex] = useState(0);
   const [currentPage, setCurrentPage] = useState('home');
@@ -21,7 +21,7 @@ export const AppProvider = ({ children }) => {
       currentPage,
       setCurrentPage,
       translations,
-      courses: lessonsData.courses, // Provide courses here
+      courses: lessonsData.courses, 
     }}>
       {children}
     </AppContext.Provider>
