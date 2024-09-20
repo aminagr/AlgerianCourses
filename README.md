@@ -1,10 +1,10 @@
 # Algerian Language Learning App
 
-Welcome to the Algerian Language Learning App! This interactive platform helps users learn and understand the Algerian dialect through a user-friendly interface. Whether you're a beginner or looking to enhance your skills, this app offers a comprehensive set of features to facilitate your learning journey.
+Welcome to the Algerian Language Learning App! This interactive platform helps users learn the Algerian dialect through a user-friendly interface. Whether you're a beginner or looking to enhance your skills, this app offers a comprehensive set of features to facilitate your learning journey.
 
 ## 📖 Features
 
-- **Multi-Language Support:** Seamlessly switch between French and English.
+- **Multi-Language Support:** Seamlessly switch between different languages.
 - **Diverse Courses:** Explore various topics including Pronouns, Greetings, Family, and Verbs.
 - **Interactive Lessons:** Engage with lesson cards that present words, translations, and notes.
 - **Responsive Design:** Smooth experience on both mobile and desktop devices.
