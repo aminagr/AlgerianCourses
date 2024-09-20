@@ -49,6 +49,8 @@ const App = () => {
       return <Home message={translations[language].welcome} />;
     } else if (currentPage === 'course') {
       const lesson = lessonsData.lessons[selectedCourse][currentLessonIndex];
+      const totalLessons = lessonsData.lessons[selectedCourse].length; // Get the total lessons
+  
       return (
         <LessonCard
           lesson={lesson}
@@ -57,6 +59,8 @@ const App = () => {
           onPrev={handlePrev}
           onClose={handleClose}
           translations={translations[language].lesson}
+          currentLessonIndex={currentLessonIndex} // Pass current lesson index
+          totalLessons={totalLessons} // Pass total number of lessons
         />
       );
     } else if (currentPage === 'courses') {
@@ -67,7 +71,6 @@ const App = () => {
       );
     }
   };
-
   return (
     <div className="app">
       <Navbar language={language} setLanguage={setLanguage} setCurrentPage={setCurrentPage} translations={translations} />
