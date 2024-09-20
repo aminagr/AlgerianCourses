@@ -108,6 +108,8 @@ body {
   width: 100%;
   max-width: 600px;
   transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  margin : 100px 0;
 }
 
 .lesson-card:hover {
@@ -175,3 +177,9 @@ button:disabled {
   display: flex;
   justify-content: space-between;
 }
+
+@media (max-width: 600px) {
+
+  .lesson-card {
+  margin : 70px 0;
+}}

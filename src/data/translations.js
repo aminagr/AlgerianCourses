@@ -1,6 +1,7 @@
 const translations = {
     fr: {
-      welcome: "Bienvenue",
+      titre: "Cours de langue algérienne",
+      accueil:"Accueil",
       courses: "Cours",
       pronouns: "Pronoms",
       greetings: "Salutations",
@@ -13,11 +14,12 @@ const translations = {
         close: "X",
         note: "Note",
       },
-      footer: "Tous droits réservés.",
+      footer: "Crée par Amina Grine. Tous droits réservés.",
       selectLanguage: "Choisissez la langue",
     },
     en: {
-      welcome: "Welcome",
+      titre: "Algerian Language Courses",
+      accueil:"Home",
       courses: "Courses",
       pronouns: "Pronouns",
       greetings: "Greetings",
@@ -30,7 +32,7 @@ const translations = {
         close: "X",
         note: "Note",
       },
-      footer: "All rights reserved.",
+      footer: "Created by Amina Grine. All rights reserved.",
       selectLanguage: "Select Language",
     },
   };
